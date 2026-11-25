@@ -30,6 +30,15 @@
     .whats{position:fixed;right:22px;bottom:22px;z-index:30;width:58px;height:58px;border-radius:50%;background:#20bf70;color:#fff;display:grid;place-items:center;font-size:27px;box-shadow:0 8px 25px #167f4c55;transition:.2s}.whats:hover{transform:translateY(-4px) scale(1.04)}.reveal{opacity:0;transform:translateY(20px);transition:.7s}.reveal.visible{opacity:1;transform:none}
     @media(max-width:850px){.hero-grid{gap:25px;grid-template-columns:1fr 1fr}.hero-art{min-height:390px}.cards{grid-template-columns:1fr 1fr}.about-grid{gap:35px}.cta-panel{padding:42px}.nav{height:70px}nav{gap:16px}}
     @media(max-width:650px){.wrap{width:min(100% - 34px,500px)}.top{font-size:10px}.nav{height:66px}.brand{font-size:24px}.brand-mark{width:37px;height:37px}.menu{display:block}nav{display:none;position:absolute;top:66px;left:0;right:0;background:var(--cream);padding:20px 25px 25px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:18px}nav.open{display:flex}nav .nav-cta{text-align:center}.hero{padding:42px 0 54px}.hero-grid{grid-template-columns:1fr;gap:35px}h1{font-size:53px;max-width:480px}.hero-copy{font-size:14px}.hero-art{min-height:340px}.hero-photo{left:15px;right:0;bottom:12px;border-radius:25px 25px 75px 25px}.photo-sticker{font-size:16px;padding:13px 16px}.spark{right:0;top:12px;font-size:40px}.ticker-inner{justify-content:flex-start;gap:28px;padding-left:18px}.ticker span{font-size:15px}section{padding:65px 0}.section-head{margin-bottom:30px}.cards{grid-template-columns:1fr}.service{min-height:0;padding:23px}.service-icon{margin-bottom:15px}.about-grid{grid-template-columns:1fr;gap:30px}.about-art{height:310px}.about-copy h2{font-size:40px}.step-grid{grid-template-columns:1fr;gap:18px}.step{padding:5px 15px}.cta-band{padding-bottom:65px}.cta-panel{padding:34px 25px;display:block;border-radius:25px}.cta-panel h2{font-size:36px;margin-bottom:12px}.cta-panel .btn{margin-top:25px}.footer-top{display:block}.footer-links{margin-top:28px}.copyright{display:block;line-height:1.8}.whats{width:54px;height:54px;right:15px;bottom:15px}}
+    /* Hero composto somente pelo banner enviado, sem textos ou elementos sobrepostos. */
+    .hero{padding:0!important;overflow:hidden}
+    .hero:before{display:none}
+    .hero-grid{display:block;width:100%;max-width:none;margin:0}
+    .hero-art{min-height:0!important;position:static;margin:0}
+    .hero-photo{position:static;inset:auto;border-radius:0;box-shadow:none;background:transparent;overflow:visible}
+    .hero-photo picture{display:block;width:100%}
+    .hero-photo img{display:block;width:100%;height:auto;object-fit:contain}
+    .hero-art .photo-sticker,.hero-art .spark{display:none}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
   </style>
 </head>
@@ -47,18 +56,8 @@
   </header>
   <main>
     <section class="hero" id="inicio">
-      <div class="wrap hero-grid">
-        <div class="reveal">
-          <span class="eyebrow"><i></i> FESTAS, EVENTOS E MUITA ALEGRIA</span>
-          <h1>Uma festa<br>com cara de <span class="highlight">diversão!</span></h1>
-          <p class="hero-copy">Momentos especiais merecem boas lembranças. Conte com a MA.lu para deixar sua comemoração mais divertida com aluguel de brinquedos para festas e eventos.</p>
-          <div class="hero-actions"><a class="btn" href="https://wa.me/5511947216605?text=Oi%2C%20MA.lu!%20Quero%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener">Quero fazer meu orçamento <span>↗</span></a><a class="text-link" href="#servicos">Conheça nossos serviços ↓</a></div>
-          <div class="mini-proof"><div class="dots"><span></span><span></span><span></span></div><span><strong>Sua comemoração</strong> merece um toque especial.</span></div>
-        </div>
-        <div class="hero-art reveal">
-          <div class="hero-photo"><picture id="hero-picture"><img id="hero-image" src="assets/file_000000009174820e9217d8eec576c672.png" alt="MA.lu Festas — imagem principal da comemoração"></picture></div>
-          <div class="photo-sticker"><small>Seu evento, sua alegria</small>Vamos celebrar! ✨</div><div class="spark">✳</div>
-        </div>
+      <div class="hero-art">
+        <div class="hero-photo"><picture id="hero-picture"><img id="hero-image" src="assets/file_000000009174820e9217d8eec576c672.png" alt="MA.lu Festas"></picture></div>
       </div>
     </section>
     <div class="ticker"><div class="ticker-inner"><span>FESTAS <b>✳</b></span><span>DIVERSÃO <b>✳</b></span><span>MOMENTOS ESPECIAIS <b>✳</b></span><span>EVENTOS <b>✳</b></span><span>FESTAS <b>✳</b></span></div></div>
